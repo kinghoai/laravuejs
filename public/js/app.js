@@ -1734,11 +1734,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       message: 'This is my first component using binding data'
     };
+  },
+  methods: {
+    sayHello: function sayHello() {
+      alert('Hello World');
+    }
   }
 });
 
@@ -37726,7 +37734,11 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "my-component" }, [
-    _vm._v(_vm._s(_vm.message))
+    _c("div", [_vm._v(_vm._s(_vm.message))]),
+    _vm._v(" "),
+    _c("div", [
+      _c("button", { on: { click: _vm.sayHello } }, [_vm._v("Click me")])
+    ])
   ])
 }
 var staticRenderFns = []

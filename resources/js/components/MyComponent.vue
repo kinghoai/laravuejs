@@ -1,5 +1,8 @@
 <template>
-    <div class="my-component">{{ message }}</div>
+    <div class="my-component">
+        <div>{{ message }}</div>
+        <div><button @click="sayHello">Click me</button></div>
+    </div>
 </template>
 
 <script>
@@ -7,6 +10,11 @@
         data() {
             return {
                 message: 'This is my first component using binding data'
+            }
+        },
+        methods: {
+            sayHello() {
+                alert('Hello World')
             }
         }
     }
